@@ -1,0 +1,30 @@
+{
+  "name": "portify-ai",
+  "version": "1.0.0",
+  "description": "Portify AI — AI-Powered Resume to Portfolio Builder",
+  "scripts": {
+    "dev:server": "npm.cmd --prefix server run dev",
+    "dev:client": "npm.cmd --prefix client run dev",
+    "dev": "concurrently \"npm.cmd --prefix server run dev\" \"npm.cmd --prefix client run dev\"",
+    "build": "npm.cmd --prefix client run build",
+    "start": "concurrently \"npm.cmd --prefix server start\" \"npm.cmd --prefix client run dev\"",
+    "test:server": "npm.cmd --prefix server test",
+    "test:client": "npm.cmd --prefix client test",
+    "test": "npm.cmd --prefix server test && npm.cmd --prefix client test",
+    "test:e2e": "npx.cmd playwright test"
+  },
+  "keywords": [
+    "resume",
+    "portfolio",
+    "ai",
+    "gemini",
+    "mern"
+  ],
+  "author": "Portify AI Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "concurrently": "^10.0.6",
+    "jszip": "^3.10.2"
+  }
+}
